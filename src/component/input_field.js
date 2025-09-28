@@ -1,13 +1,12 @@
+import React from 'react';
 import { useState } from 'react';
 import { Button } from './button';
 
-export const InputField = () => {
+export const InputField = ({ ingredients, setIngredients }) => {
     // JavaScript goes here
 
     // Input field for user to type in, initially empty of course
     const [input, setInput] = useState("");
-    // Same as above, but storing an array/list of currently input ingredients, initially empty list
-    const [ingredients, setIngredients] = useState([]);
 
     // The function called from onChange in the input html
     const handleChange = (event) => {
@@ -26,13 +25,9 @@ export const InputField = () => {
     setInput("");
     };
 
-    // Called from within html below
-    const renderIngredientItems = () => {
-        // Maps the item name (ingredient) to an idex
-        return ingredients.map((item, index) => (
-            // Creating the <li> element with the item name, item means "each element"
-            <li key={index}>{item}</li>
-        ));
+    const removeItem = (idx) => {
+      const next = ingredients.filter((_, i) => i !== idx);
+      setIngredients(next);
     };
 
     return (
@@ -54,8 +49,13 @@ export const InputField = () => {
         </div>
       </form>
 
+      <h3>Ingredients List:</h3>
       <ul className="ingredient-list">
-        {renderIngredientItems()}
+        {ingredients.map((item, index) => (
+          <li key={index}>
+            {item} <button onClick={() => removeItem(index)}>×</button>
+          </li>
+        ))}
       </ul>
     </div>
     
