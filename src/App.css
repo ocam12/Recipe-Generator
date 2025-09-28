@@ -1,6 +1,7 @@
 :root{
   --primary-colour: rgb(86, 229, 86);
   --secondary-colour: rgb(162, 162, 162);
+  --delete-colour: rgb(200, 40, 40);
   --input-height: 50px;
 }
 
@@ -75,6 +76,21 @@ label{
   box-shadow: 0 0px 10px var(--primary-colour);
 }
 
+.delete-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  color: var(--delete-colour);
+  border: 2px solid var(--delete-colour);
+  padding: 0 !important;
+}
+
+.delete-btn:hover{
+  background-color: var(--delete-colour);
+  color: white;
+}
+
 .form-wrapper{
   display: flex;
   flex-direction: column;
@@ -87,7 +103,8 @@ label{
 }
 
 .input-wrapper{
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   justify-content: center;
   align-items: start;
   gap: 50px;
@@ -121,7 +138,7 @@ label{
 
 .ingredient-list {
     font-size: 1.2rem;
-    width: 200px;
+    width: 250px;
     height: 100%;
     max-height: 160px;
     overflow: auto;
@@ -130,4 +147,32 @@ label{
     padding-bottom: 20px;
     padding-left: 2px;
     border-bottom: 1px solid var(--primary-colour);
+}
+
+.ingredient-list li{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 30px;
+}
+
+@media (max-width: 1500px){
+  .form-wrapper{
+    margin-bottom: 50px;
+  }
+
+  .input-wrapper{
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
+  }
+}
+
+@media (max-width: 800px){
+  .navbar h1{
+    display: none;
+  }
+
+  .input-wrapper{
+    grid-template-columns: 1fr;
+  }
 }
