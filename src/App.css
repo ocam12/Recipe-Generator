@@ -70,4 +70,36 @@ h1{
 .secondary-btn:hover{
   box-shadow: 0 0px 10px var(--primary-colour);
 }
-  
+  .input-ingredients {
+    width: 200px;
+    align-self: stretch;
+}
+
+.button-add-ingredient {
+    width: 50px;
+    align-self: stretch;
+}
+
+.ingredient-form {
+    flex-direction: column;
+}
+
+.ingredient-set {
+    display: flex;
+    height: 30px;
+    align-items: center;
+    font-size: 1rem;
+}
+
+.ingredient-heading {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.ingredient-list {
+    font-size: 1.1rem;
+    width: 200px;
+    height: 250px;
+    overflow: scroll;
+    list-style-type: none;
+}

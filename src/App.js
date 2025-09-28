@@ -1,3 +1,4 @@
+import { InputField } from './components/input_field';
 import './App.css';
 import { useEffect, useState } from 'react';
 import { InputField } from './component/input-field.js';
