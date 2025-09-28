@@ -19,6 +19,7 @@ export const InputField = ({ ingredients, setIngredients }) => {
 
     // Guard against empty input
     if (input.trim() === "") return;
+    if (input.length > 15) return;
     
     // "...ingredients" means copy the current ingredients, then we add input as the new element
     setIngredients([...ingredients, input]);
@@ -44,9 +45,13 @@ export const InputField = ({ ingredients, setIngredients }) => {
             value={input}
             onChange={handleChange}
             placeholder="Chicken, Onion, ..."
+            maxLength={15}
         />
         <Button type="submit" text="Add" buttonType={'primary'} width="100px" height="50px"></Button>
         </div>
+          {input.length >= 15 && (
+            <div className='input-warning'>Max. 15 Characters Allowed</div>
+          )}
       </form>
 
       <ul className="ingredient-list">
