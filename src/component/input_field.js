@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
+import { Button } from './button';
 
 export const InputField = ({ ingredients, setIngredients }) => {
     // JavaScript goes here
@@ -33,22 +34,21 @@ export const InputField = ({ ingredients, setIngredients }) => {
     // HTML goes here
     
     <div>
-      <form class="ingredient-form" onSubmit={handleSubmit}>
-        <label class="ingredient-heading" htmlFor='ingredient-input'>Tell Us Your Ingredients</label>
-        <div class="ingredient-set">
+      <form className="ingredient-form" onSubmit={handleSubmit}>
+        <label className="ingredient-heading" htmlFor='ingredient-input'>Owned Ingredients: </label>
+        <div className="ingredient-set">
         <input
             id="ingredient-input"
-            class="input-ingredients"
+            className="input-ingredients"
             type="text"
             value={input}
             onChange={handleChange}
-            placeholder="Type in an ingredient here"
+            placeholder="Chicken, Onion, ..."
         />
-        <button class="button-add-ingredient" type="submit">Add</button>
+        <Button type="submit" text="Add" primary={false} width="100px" height="50px"></Button>
         </div>
       </form>
 
-      <h3>Ingredients List:</h3>
       <ul className="ingredient-list">
         {ingredients.map((item, index) => (
           <li key={index}>

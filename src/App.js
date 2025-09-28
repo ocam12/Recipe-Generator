@@ -3,7 +3,8 @@ import './App.css';
 import { useEffect, useState} from 'react';
 import { MultipleSelect } from './component/multiple-select.js';
 import { FormWrapper } from './component/form-wrapper.js';
-import { Navbar } from './component/nav.js';import { RecipeGallery } from './components/recipegallery/recipegallery';
+import { Navbar } from './component/nav.js';
+import { RecipeGallery } from './component/recipe-gallery/recipegallery.js';
 
  
 function App() {
