@@ -37,7 +37,17 @@ export const RecipeCard = ({item}) => {
             <img src={item.image}></img>
             <div className="recipecardinfo">
                 <h3>{item.title}</h3>
-                <div dangerouslySetInnerHTML={{ __html: item.summary }} />
+                <p>Serves {item.servings}</p>
+                <p>Ready In {item.readyInMinutes} Minutes</p>
+                <a href={item.sourceUrl} target="_BLANK">Source And Instructions</a>
+                <ul>
+                    {item.cuisines.map((cuisine, index) => {
+                        return (
+                            <li key={index}>{cuisine}</li>                                    
+                        )
+                    })}
+                </ul>
+
                 <Button onClick={toggleIngredients} text={"Show Ingredients"} width={'100%'}></Button>
 
                 {showIngredients && (
