@@ -1,11 +1,13 @@
 import './App.css';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import { RecipeGallery } from './components/recipegallery/recipegallery';
 
  
 function App() { 
   const key = process.env.REACT_APP_SPOON_KEY;
   const ingredientsInclude = "burger";
   const ingredientsExclude = "rice";
+  const [Recipes, setRecipes] = useState([]);
 
   const url = `https://api.spoonacular.com/recipes/complexSearch?includeIngredients=${ingredientsInclude}&excludeIngredients=${ingredientsExclude}&addRecipeInformation=true&number=5&apiKey=${key}`;
 
@@ -15,6 +17,8 @@ function App() {
         if (!response.ok){throw new Error("Could not connect")}
         const data = await response.json();
         console.log(data);
+
+        setRecipes(data.results);
     } catch (e) {
         console.log('Could not search properly: ' + e);
     }
@@ -39,6 +43,8 @@ function App() {
           Learn React
         </a>
       </header>
+
+      <RecipeGallery items={Recipes}></RecipeGallery>
     </div>
   );
 }
