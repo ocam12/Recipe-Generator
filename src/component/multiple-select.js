@@ -45,6 +45,8 @@ export const MultipleSelect = ({id, options, label}) => {
                 styles={{
                     control: (base, state) => ({
                     ...base,
+                    minHeight: '50px',
+                    fontSize: '1.1rem',
                     borderColor: state.isFocused ? '#17ff32ff' : base.borderColor,
                     '&:hover': {
                         borderColor: state.isFocused ? '#17ff32ff' : base.borderColor

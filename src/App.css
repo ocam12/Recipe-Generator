@@ -1,5 +1,7 @@
 :root{
   --primary-colour: rgb(86, 229, 86);
+  --secondary-colour: rgb(162, 162, 162);
+  --input-height: 50px;
 }
 
 *{
@@ -8,19 +10,15 @@
 }
 
 h1{
-  font-size: 2rem;
+  font-size: 2.6rem;
 }
 
-.form-wrapper{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-  height: 200px;
+h2{
+  font-size: 2.2rem;
 }
 
-.multiple-select{
-  width: 300px;
+label{
+  font-size: 1.2rem;
 }
 
 .navbar{
@@ -29,16 +27,22 @@ h1{
   align-items: center;
   height: 100px;
   padding: 0px 40px;
-  border-bottom: 1px solid var(--primary-colour);
+  border-bottom: 1px solid var(--secondary-colour);
 }
 
-.btn-wrapper{
+.logo{
+  height: 50px;
+}
+
+.center-wrapper{
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 20px;
 }
 
 .btn{
+  box-sizing: border-box;
   font-size: 1.2rem;
   width: 140px;
   height: 50px;
@@ -70,4 +74,60 @@ h1{
 .secondary-btn:hover{
   box-shadow: 0 0px 10px var(--primary-colour);
 }
-  
+
+.form-wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 50px;
+  height: 100%;
+  margin-top: 80px;
+  margin-bottom: 20px;
+}
+
+.input-wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  gap: 50px;
+  height: 200px;
+}
+
+.multiple-select{
+  width: 300px;
+}
+
+.input-ingredients {
+  width: 200px;
+  align-self: stretch;
+  font-size: 1.1rem;
+}
+
+.input-ingredients:focus {
+  outline: 2px solid var(--primary-colour);
+}
+
+.ingredient-form {
+    flex-direction: column;
+}
+
+.ingredient-set {
+    display: flex;
+    height: 50px;
+    align-items: center;
+    gap: 10px;
+}
+
+.ingredient-list {
+    font-size: 1.2rem;
+    width: 200px;
+    height: 100%;
+    max-height: 160px;
+    overflow: scroll;
+    list-style-type: none;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 2px;
+    border-bottom: 1px solid var(--primary-colour);
+}
