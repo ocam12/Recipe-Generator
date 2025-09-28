@@ -1,6 +1,6 @@
 import { InputField } from './component/input_field.js';
 import './App.css';
-import { useEffect, useState, useState } from 'react';
+import { useEffect, useState} from 'react';
 import { MultipleSelect } from './component/multiple-select.js';
 import { FormWrapper } from './component/form-wrapper.js';
 import { Navbar } from './component/nav.js';import { RecipeGallery } from './components/recipegallery/recipegallery';
