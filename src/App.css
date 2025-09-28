@@ -138,7 +138,7 @@ label{
 
 .ingredient-list {
     font-size: 1.2rem;
-    width: 200px;
+    width: 250px;
     height: 100%;
     max-height: 160px;
     overflow: auto;
@@ -153,6 +153,7 @@ label{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  line-height: 30px;
 }
 
 @media (max-width: 1500px){
