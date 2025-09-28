@@ -54,7 +54,7 @@ export const FormWrapper = ({ setRecipes }) => {
                 <MultipleSelect id="intolerence" options={intolerenceOptions} label="Intolerences: "></MultipleSelect>
                 <MultipleSelect id="cuisine" options={cuisineOptions} label="Cuisine: "></MultipleSelect>
             </div>
-            <Button text={"Generate Recipes"} primary={true} width={"400px"}></Button>
+            <Button text={"Generate Recipes"} primary={true} width={"400px"} onClick={fetchData}></Button>
         </div>
     )
 }

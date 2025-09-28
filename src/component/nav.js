@@ -10,7 +10,7 @@ export const Navbar = () => {
         <nav className="navbar">
             <div className="center-wrapper">
                 <h1>Recipe Generator</h1>
-                <img class="logo" src="/Recipe_Generator_Logo.png"></img>
+                <img className="logo" src="/Recipe_Generator_Logo.png"></img>
             </div>
             <div className="center-wrapper">
                 <Button text="About" primary={true}></Button>

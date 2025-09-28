@@ -49,7 +49,6 @@ export const InputField = ({ ingredients, setIngredients }) => {
         </div>
       </form>
 
-      <h3>Ingredients List:</h3>
       <ul className="ingredient-list">
         {ingredients.map((item, index) => (
           <li key={index}>
