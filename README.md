@@ -11,6 +11,8 @@ Click [here](https://spoonacular.com/food-api/console#Dashboard) and sign-up to 
 Once signing up, log in, choose the 'Profile & API Key' tab, press 'Show / Hide API Key' and then copy this key.
 
 #### .ENV File
+Create a .ENV file by renaming .env.example.
+
 In the .ENV file you should add the key found in the space provided.
 ```
 REACT_APP_SPOON_KEY = ENTER_YOUR_KEY_HERE
