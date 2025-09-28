@@ -1,5 +1,6 @@
 import { useState } from "react"
 import "./recipes.css"
+import { Button } from "../button";
 const key = process.env.REACT_APP_SPOON_KEY;
 
 export const RecipeCard = ({item}) => {
@@ -37,7 +38,7 @@ export const RecipeCard = ({item}) => {
             <div className="recipecardinfo">
                 <h3>{item.title}</h3>
                 <div dangerouslySetInnerHTML={{ __html: item.summary }} />
-                <button onClick={toggleIngredients}>click me</button>
+                <Button onClick={toggleIngredients} text={"Show Ingredients"} width={'100%'}></Button>
 
                 {showIngredients && (
                     <div className="ingredientscontainer">
