@@ -45,15 +45,17 @@ export const InputField = ({ ingredients, setIngredients }) => {
             onChange={handleChange}
             placeholder="Chicken, Onion, ..."
         />
-        <Button type="submit" text="Add" primary={false} width="100px" height="50px"></Button>
+        <Button type="submit" text="Add" buttonType={'primary'} width="100px" height="50px"></Button>
         </div>
       </form>
 
       <ul className="ingredient-list">
         {ingredients.map((item, index) => (
-          <li key={index}>
-            {item} <button onClick={() => removeItem(index)}>×</button>
-          </li>
+            <li key={index}>
+                <p>{item} </p>
+
+                <Button text="x" buttonType={'delete'} width="30px" height="25px" onClick={() => removeItem(index)}></Button>
+            </li>
         ))}
       </ul>
     </div>
