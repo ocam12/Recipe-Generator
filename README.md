@@ -1,5 +1,5 @@
 # Recipe-Generator
-The Recipe Generator was built as a team of 3 in one afternoon to experiment with the [spoonacular API](https://spoonacular.com/food-api) and React.
+The Recipe Generator was built as a team of 3 in two days to experiment with the [spoonacular API](https://spoonacular.com/food-api) and React.
 
 The project aims to accept a selection of ingredients and some preferences to output a short list of recipes that can be made.
 ## Running the Recipe-Generator
