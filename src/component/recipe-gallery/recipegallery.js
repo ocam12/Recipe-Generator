@@ -1,8 +1,8 @@
 import { RecipeCard } from "./recipecard"
 import "./recipes.css"
 
+//HTML for the recipe gallery - maps each recipe to a recipe card 
 export const RecipeGallery = ({items}) => {
-
     return (
         <div style={{justifyContent: "center", display: "flex"}}>
             <div className="recipegallery">
@@ -15,6 +15,5 @@ export const RecipeGallery = ({items}) => {
                 
             </div>            
         </div>
-
     )
 }

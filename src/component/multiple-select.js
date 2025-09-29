@@ -2,6 +2,7 @@ import React from "react";
 import Select from "react-select";
 import { useState } from "react";
 
+//diet options array
 export const dietOptions = [
   {value: 'Gluten%20Free', label: 'Gluten Free'},
   {value: 'Ketogenic', label: 'Ketogenic'},
@@ -16,6 +17,7 @@ export const dietOptions = [
   {value: 'Whole30', label: 'Whole30'},
 ];
 
+//intolerence options array
 export const intolerenceOptions = [
   {value: 'Dairy', label: 'Dairy'},
   {value: 'Egg', label: 'Egg'},
@@ -31,6 +33,7 @@ export const intolerenceOptions = [
   {value: 'Wheat', label: 'Wheat'},
 ];
 
+//cuisine options array
 export const cuisineOptions = [
   {value: 'African', label: 'African'},
   {value: 'Asian', label: 'Asian'},

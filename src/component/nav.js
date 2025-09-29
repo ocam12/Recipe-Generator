@@ -3,18 +3,20 @@ import { useState } from "react"
 import { Button } from "./button";
 import { HamburgerMenu } from "./hamburger-menu/hamburger-menu";
 
+//function to open external link in new page
 export const openPage = (link) => {
     window.open(link, "_blank");
 }
 
 export const Navbar = () => {
-    const [showHamburgerMenu, setShowHamburgerMenu] = useState(false);
+    const [showHamburgerMenu, setShowHamburgerMenu] = useState(false);      //state to control whether hamburger menu shown or not
 
 
-    const toggleHamburgerMenu = () => {
+    const toggleHamburgerMenu = () => {         //toggles hamburger menu off or on
         setShowHamburgerMenu(!showHamburgerMenu);
     }
 
+    //HTML for navbar including normal header buttons and hamurger menu/button
     return (
         <nav className="navbar">
             <div className="center-wrapper">
