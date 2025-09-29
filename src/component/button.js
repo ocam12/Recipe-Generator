@@ -8,6 +8,6 @@ export const Button = ({text, buttonType, width, height, onClick, param}) => {
     const btnClass = `btn ${buttonType}-btn`;
 
     return (
-        <button style={{width: width, height:height}} className={btnClass} onClick={handleClick}>{text}</button>
+        <button style={{width: width, height:height, maxWidth: '80vw'}} className={btnClass} onClick={handleClick}>{text}</button>
     )
 }

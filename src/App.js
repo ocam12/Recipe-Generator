@@ -5,6 +5,7 @@ import { MultipleSelect } from './component/multiple-select.js';
 import { FormWrapper } from './component/form-wrapper.js';
 import { Navbar } from './component/nav.js';
 import { RecipeGallery } from './component/recipe-gallery/recipegallery.js';
+import { Footer } from './component/footer.js';
 
  
 function App() {
@@ -18,6 +19,7 @@ function App() {
       
 
       <RecipeGallery items={Recipes}></RecipeGallery>
+      <Footer></Footer>
     </div>
   );
 }
