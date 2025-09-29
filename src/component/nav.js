@@ -27,7 +27,7 @@ export const Navbar = () => {
                 <Button text="API" buttonType={'secondary'} onClick={openPage} param={`https://spoonacular.com/food-api/docs#Search-Recipes-Complex`}></Button>
             </div>
             <button className="hamburger-button" onClick={toggleHamburgerMenu}>
-                <img src="/hamburger-menu.svg" width={"40px"} height={"40px"}></img>
+                <img src="/hamburger_Icon.png" width={"40px"} height={"40px"}></img>
             </button>
             <HamburgerMenu isOpen={showHamburgerMenu} closeMenu={() => setShowHamburgerMenu(false)}></HamburgerMenu>
         </nav>
