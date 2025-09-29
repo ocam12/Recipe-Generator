@@ -121,6 +121,13 @@ label{
   font-size: 1.1rem;
 }
 
+.input-warning {
+  color: var(--delete-colour);
+  font-size: 0.9rem;
+  margin-top: 10px;
+  position: absolute;
+}
+
 .input-ingredients:focus {
   outline: 2px solid var(--primary-colour);
 }
