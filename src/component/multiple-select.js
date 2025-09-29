@@ -3,16 +3,16 @@ import Select from "react-select";
 import { useState } from "react";
 
 export const dietOptions = [
-  {value: 'Vegan', label: 'Vegan'},
-  {value: 'Vegetarian', label: 'Vegetarian'},
   {value: 'Gluten%20Free', label: 'Gluten Free'},
   {value: 'Ketogenic', label: 'Ketogenic'},
   {value: 'Lacto-Vegetarian', label: 'Lacto-Vegetarian'},
-  {value: 'Ovo-Vegetarian', label: 'Ovo-Vegetarian'},
-  {value: 'Pescetarian', label: 'Pescetarian'},
-  {value: 'Paleo', label: 'Paleo'},
-  {value: 'Primal', label: 'Primal'},
   {value: 'Low%20FODMAP', label: 'Low FODMAP'},
+  {value: 'Ovo-Vegetarian', label: 'Ovo-Vegetarian'},
+  {value: 'Paleo', label: 'Paleo'},
+  {value: 'Pescetarian', label: 'Pescetarian'},
+  {value: 'Primal', label: 'Primal'},
+  {value: 'Vegan', label: 'Vegan'},
+  {value: 'Vegetarian', label: 'Vegetarian'},
   {value: 'Whole30', label: 'Whole30'},
 ];
 
@@ -93,9 +93,9 @@ export const MultipleSelect = ({id, options, label, value, onChange}) => {
                     ...base,
                     minHeight: '50px',
                     fontSize: '1.1rem',
-                    borderColor: state.isFocused ? '#17ff32ff' : base.borderColor,
+                    borderColor: state.isFocused ? '#0eff0eff' : base.borderColor,
                     '&:hover': {
-                        borderColor: state.isFocused ? '#17ff32ff' : base.borderColor
+                        borderColor: state.isFocused ? '#0eff0eff' : base.borderColor
                     }
                     })
                 }}

@@ -1,0 +1,66 @@
+.hamburger-button{
+    display: none;
+    position: relative;
+    background-color: transparent;
+    border: none;
+    z-index: 400;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.hamburger-button:hover{
+    scale: 1.05;
+}
+
+.hamburger-menu{
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 100;
+
+    transform: translateX(110%); /* move it off-screen to the right */
+    transition: transform 0.3s ease; /* smooth slide */
+}
+
+.hamburger-menu.open {
+    transform: translateX(0); /* slide it in */
+}
+
+.hamburger-menu-inner{
+    height: 40vh;
+    width: 65vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 10px grey;
+    gap: 5vh;
+    padding-top: 70px;
+}
+
+.hamburger-menu-inner .btn{
+    height: 60px;
+    width: 150px;
+}
+
+@media(min-width: 651px){   /*Introduce hamburger men*/
+    .navbar-btn-container{
+        display: flex;
+    }
+
+
+    .hamburger-menu{
+        display: none;
+    }
+}
+
+@media(max-width: 650px){   /*Introduce hamburger men*/
+    .navbar-btn-container{
+        display: none;
+    }
+
+    .hamburger-button{
+        display: inline;
+    }
+}
