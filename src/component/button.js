@@ -10,7 +10,7 @@ export const Button = ({text, buttonType, width, height, onClick, param, to}) =>
 
     if (to) {
         return (
-            <Link to={to} style={{width: width, height: height}} className={btnClass}>
+            <Link to={to} style={{width: width, height: height}} className={btnClass} onClick={handleClick}>
                 {text}
             </Link>
         );

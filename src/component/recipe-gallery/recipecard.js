@@ -27,7 +27,6 @@ export const RecipeCard = ({item}) => {
         if (showIngredients == false) {
             fetchData();            
         }
-
         
         setShowIngredients(!showIngredients);
     }
