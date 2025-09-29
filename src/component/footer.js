@@ -2,6 +2,8 @@ import React from 'react';
 import { useState } from 'react';
 import { Button } from './button';
 
+// A simple footer component styled by the "footer" class to give additional information at the bottom of the page
+
 export const Footer = () => {
     return (
         // HTML goes here
