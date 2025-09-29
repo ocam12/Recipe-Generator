@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 
 // An overarching Button component that can be reused for styling consistency

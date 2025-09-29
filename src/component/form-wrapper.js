@@ -1,5 +1,4 @@
-import React from "react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { MultipleSelect } from "./multiple-select.js";
 import { dietOptions, intolerenceOptions, cuisineOptions } from "./multiple-select.js";
 import { InputField } from "./input_field.js";

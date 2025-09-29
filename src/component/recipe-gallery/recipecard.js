@@ -24,7 +24,7 @@ export const RecipeCard = ({item}) => {
             }
         }
 
-        if (showIngredients == false) {     
+        if (showIngredients === false) {     
             fetchData();            
         }
         
@@ -33,7 +33,7 @@ export const RecipeCard = ({item}) => {
 
     return (        //HTML for the recipe cards
         <div className="recipecard">
-            <img src={item.image}></img>
+            <img src={item.image} alt="recipe image"></img>
             <div className="recipecard-info">
                 <div className="recipecard-info-main">
                     <h3 className="recipecard-title">{item.title}</h3>
@@ -42,7 +42,7 @@ export const RecipeCard = ({item}) => {
                         <p>Ready In {item.readyInMinutes} Minutes</p>
                     </div>
                     <div className="recipecard-btn-container row">
-                        <a className="recipecard-link btn primary-btn" href={item.sourceUrl} target="_BLANK">Recipe</a>
+                        <a className="recipecard-link btn primary-btn" href={item.sourceUrl} target="_BLANK" rel="noreferrer">Recipe</a>
                         <Button buttonType="secondary" onClick={toggleIngredients} text={"Show Ingredients"} width={'200px'}></Button>
                     </div>
                 </div>

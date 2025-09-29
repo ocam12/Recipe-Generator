@@ -1,4 +1,3 @@
-import React from 'react';
 import { Button } from '../button';
 import { openPage } from '../nav';
 import "./hamburger-menu.css"

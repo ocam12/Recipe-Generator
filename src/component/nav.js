@@ -1,4 +1,3 @@
-import React from "react";
 import { useState } from "react"
 import { Button } from "./button";
 import { HamburgerMenu } from "./hamburger-menu/hamburger-menu";
@@ -21,7 +20,7 @@ export const Navbar = () => {
         <nav className="navbar">
             <div className="center-wrapper">
                 <h1>Recipe Generator</h1>
-                <img className="logo" src="/Recipe_Generator_Logo.png"></img>
+                <img className="logo" src="/Recipe_Generator_Logo.png" alt="logo"></img>
             </div>
             <div className="center-wrapper navbar-btn-container">
                 <Button text="Home" buttonType="primary" to="/"></Button>
@@ -29,7 +28,7 @@ export const Navbar = () => {
                 <Button text="API" buttonType={'secondary'} onClick={openPage} param={`https://spoonacular.com/food-api/docs#Search-Recipes-Complex`}></Button>
             </div>
             <button className="hamburger-button" onClick={toggleHamburgerMenu}>
-                <img src="/hamburger_Icon.png" width={"68px"} height={"50px"}></img>
+                <img src="/hamburger_Icon.png" width={"68px"} height={"50px"} alt="hamburger menu"></img>
             </button>
             <HamburgerMenu isOpen={showHamburgerMenu} closeMenu={() => setShowHamburgerMenu(false)}></HamburgerMenu>
         </nav>
