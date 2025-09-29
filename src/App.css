@@ -26,12 +26,16 @@ label{
 }
 
 .navbar{
+  position: sticky;
+  top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 100px;
   padding: 0px 40px;
+  background-color: white;
   border-bottom: 1px solid var(--secondary-colour);
+  z-index: 100;
 }
 
 .logo{
@@ -108,7 +112,7 @@ label{
   gap: 50px;
   height: 100%;
   margin-top: 80px;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 }
 
 .about-wrapper{
@@ -194,6 +198,12 @@ label{
   line-height: 30px;
 }
 
+.footer{
+  margin: 50px 0;
+  padding-left: 30px;
+  font-size: 1.2rem;
+}
+
 @media (max-width: 1500px){
   .form-wrapper{
     margin-bottom: 50px;
@@ -223,4 +233,8 @@ label{
   .input-wrapper{
     grid-template-columns: 1fr;
   }
+}
+
+@media(max-width: 500px){
+  
 }
