@@ -13,7 +13,8 @@ export const Navbar = () => {
                 <img className="logo" src="/Recipe_Generator_Logo.png"></img>
             </div>
             <div className="center-wrapper">
-                <Button text="About" buttonType={'primary'}></Button>
+                <Button text="Home" buttonType="primary" to="/"></Button>
+                <Button text="About" buttonType="primary" to="/about"></Button>
                 <Button text="API" buttonType={'secondary'} onClick={openPage} param={`https://spoonacular.com/food-api/docs#Search-Recipes-Complex`}></Button>
             </div>
         </nav>
