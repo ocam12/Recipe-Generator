@@ -35,23 +35,39 @@ export const RecipeCard = ({item}) => {
     return (
         <div className="recipecard">
             <img src={item.image}></img>
-            <div className="recipecardinfo">
-                <h3>{item.title}</h3>
-                <div dangerouslySetInnerHTML={{ __html: item.summary }} />
-                <Button onClick={toggleIngredients} text={"Show Ingredients"} width={'100%'}></Button>
+            <div className="recipecard-info">
+                <div className="recipecard-info-main">
+                    <h3 className="recipecard-title">{item.title}</h3>
+                    <div className="recipecard-subtitle row">
+                        <p>Serves {item.servings}</p>
+                        <p>Ready In {item.readyInMinutes} Minutes</p>
+                    </div>
+                    <div className="recipecard-btn-container row">
+                        <a className="recipecard-link btn primary-btn" href={item.sourceUrl} target="_BLANK">Recipe</a>
+                        <Button buttonType="secondary" onClick={toggleIngredients} text={"Show Ingredients"} width={'200px'}></Button>
+                    </div>
+                </div>
 
                 {showIngredients && (
-                    <div className="ingredientscontainer">
-                        <ul>
+                    <div className="ingredients-container">
+                        <p>Ingredients: </p>
+                        <ul className="ingredients-list">
                             {ingredients.map((item, index) => {
                                 return (
-                                    <li key={index}>{item.name}</li>                                    
+                                    <li className="ingredient" key={index}>{item.name}</li>                                    
                                 )
                             })}
                         </ul>                   
                     </div>
                 )}
 
+                 <ul className="recipecard-cuisine-list">
+                    {item.cuisines.map((cuisine, index) => {
+                        return (
+                            <li key={index}>{cuisine}</li>                                    
+                        )
+                    })}
+                </ul>
             </div>   
         </div>
     )
