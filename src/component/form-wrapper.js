@@ -34,6 +34,13 @@ export const FormWrapper = ({ setRecipes }) => {
             if (!response.ok) throw new Error('Could not connect');
 
             const data = await response.json();
+
+            // Guard against no results
+            if (!data.results || data.results.length === 0) {
+                alert("No recipes found for chosen ingredients and selections. Please double check your ingredients and selections and try again.");
+                return;
+            }
+
             console.log(data);
             // Set the recipes according to the fetch of the API request
             setRecipes(data.results);
